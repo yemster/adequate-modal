@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Owning Bootstrap modal</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/_modal.css">
+    <style type="text/css">
+      * { box-sizing: border-box; }
+      html, body {
+        width: 100%; height: 100%;
+        font-size: 62.5%;
+        font-weight: 300;
+        min-height: 100%;
+      }
+        body {
+          color: #000;
+          font-size: 1.8rem;
+          text-align: center;
+        }
+
+      img {
+        max-width: 100%;
+        max-height: 100%
+      }
+
+      .main {
+        border: 1px solid;
+        margin: 30px auto;
+        width: 90%;
+        max-width: 1200px;
+        padding: 50px 20px;
+      }
+      .viz {
+        display: block;
+        opacity: 1;
+        position: initial;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <h1> Adequate modal</h1>
+      <p>
+        <code>div.adqt-modal</code>
+        <br/> customised namespaced fork of bootstrap modal
+        <br/><br/>
+      </p>
+      <!--
+        <div class="modal .js-card-modal.hotspot-modal.hotspot-modal--frontend">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                What is this here?
+              </div>
+            </div>
+          </div>
+        </div>
+      -->
+
+      <!--
+        ******************************** Static Modal ********************************
+      -->
+      <div class="adqt-modal fade viz" tabindex="-1" role="dialog">
+        <div class="adqt-modal-dialog" role="document">
+          <div class="adqt-modal-content">
+            <div class="adqt-modal-header">
+              <button type="button" class="close" data-dismiss="adqt-modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="adqt-modal-title">adqt-Modal title</h4>
+            </div>
+            <div class="adqt-modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="adqt-modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="adqt-modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
+
+      <!--
+        ******************************** Summoned Modal ********************************
+      -->
+
+      <div class="adqt-modal fade" id="myadqt-Modal" tabindex="-1" role="dialog" aria-labelledby="myadqt-ModalLabel">
+        <div class="adqt-modal-dialog" role="document">
+          <div class="adqt-modal-content">
+            <div class="adqt-modal-header">
+              <button type="button" class="close" data-dismiss="adqt-modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="adqt-modal-title" id="myadqt-ModalLabel">adqt-Modal title</h4>
+            </div>
+            <div class="adqt-modal-body">
+              this is where the content lives
+              <img src="https://scontent.cdninstagram.com/t51.2885-15/13408761_1737614649827378_1832962154_n.jpg?ig_cache_key=MTI3ODg3MTUxNzA1Nzk3MDc1Nw%3D%3D.2">
+            </div>
+            <div class="adqt-modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="adqt-modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Button trigger adqt-modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="adqt-modal" data-target="#myadqt-Modal">
+        Launch demo adqt-modal
+      </button>
+
+    </section>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+  </body>
+</html>
